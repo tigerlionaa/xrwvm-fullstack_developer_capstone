@@ -1,0 +1,212 @@
+<html>
+<head>
+  <!-- Link the style sheet here -->
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    .contact-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .contact-card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      height: 100%;
+    }
+    .contact-icon {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: darkturquoise;
+    }
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      padding: 10px;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+    .info-icon {
+      font-size: 18px;
+      color: darkturquoise;
+      margin-right: 10px;
+      min-width: 20px;
+    }
+    .form-control {
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .btn-contact {
+      background-color: darkturquoise;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      width: 100%;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+    <div class="container-fluid">
+      <h2 style="padding-right: 5%;">Dealerships</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="contact-container">
+    <div class="card" style="width: 90%; margin: auto; margin-top: 3%;">
+      <div class="banner" name="contact-header">
+        <h1>Contact Us</h1>
+        Welcome to Best Cars dealership. We're here to help you find your perfect vehicle.
+      </div>
+      
+      <!-- Main Content - Single Row -->
+      <div style="display: flex; flex-direction: row; margin: auto; padding: 20px; gap: 20px;">
+        
+        <!-- Left Column - Contact Info -->
+        <div style="flex: 1;">
+          <div class="contact-card">
+            <div class="card-body">
+              <h3 class="card-title">Contact Information</h3>
+              
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt info-icon"></i>
+                <div>
+                  <strong>Our Location</strong><br>
+                  123 Automotive Avenue, New York, NY 10001
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <i class="fas fa-phone info-icon"></i>
+                <div>
+                  <strong>Phone Numbers</strong><br>
+                  Main: (555) 123-4567<br>
+                  Service: (555) 123-4568
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <i class="fas fa-envelope info-icon"></i>
+                <div>
+                  <strong>Email</strong><br>
+                  info@bestcars.com<br>
+                  sales@bestcars.com
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <i class="fas fa-clock info-icon"></i>
+                <div>
+                  <strong>Business Hours</strong><br>
+                  Mon-Fri: 9AM-7PM<br>
+                  Sat: 10AM-5PM
+                </div>
+              </div>
+
+              <!-- Quick Department Contacts -->
+              <div style="margin-top: 20px;">
+                <h5>Quick Contacts</h5>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+                  <span class="badge bg-primary">Sales: (555) 123-4567</span>
+                  <span class="badge bg-success">Service: (555) 123-4568</span>
+                  <span class="badge bg-info">Parts: (555) 123-4569</span>
+                  <span class="badge bg-warning">Finance: (555) 123-4570</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column - Contact Form -->
+        <div style="flex: 1;">
+          <div class="contact-card">
+            <div class="card-body">
+              <h3 class="card-title">Send Us a Message</h3>
+              <form id="contactForm">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="First Name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Last Name" required>
+                  </div>
+                </div>
+                <input type="email" class="form-control" placeholder="Email Address" required>
+                <input type="tel" class="form-control" placeholder="Phone Number">
+                <select class="form-control" required>
+                  <option value="">Select Department</option>
+                  <option value="sales">Sales</option>
+                  <option value="service">Service</option>
+                  <option value="parts">Parts</option>
+                  <option value="finance">Finance</option>
+                  <option value="general">General Inquiry</option>
+                </select>
+                <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn-contact">
+                  <i class="fas fa-paper-plane me-2"></i>Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Compact Department Cards -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; padding: 0 20px 20px 20px;">
+        <div class="contact-card text-center">
+          <div class="card-body">
+            <div class="contact-icon">🚗</div>
+            <h6>Sales Department</h6>
+            <small>Find your perfect vehicle with expert guidance</small>
+          </div>
+        </div>
+        
+        <div class="contact-card text-center">
+          <div class="card-body">
+            <div class="contact-icon">🔧</div>
+            <h6>Service Center</h6>
+            <small>Professional maintenance and repairs</small>
+          </div>
+        </div>
+        
+        <div class="contact-card text-center">
+          <div class="card-body">
+            <div class="contact-icon">💰</div>
+            <h6>Financing</h6>
+            <small>Competitive rates and flexible plans</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your message! We will get back to you within 24 hours.');
+    this.reset();
+});
+</script>
+</html>
